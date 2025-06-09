@@ -1,0 +1,101 @@
+# Associations QC
+
+
+
+```{r, echo=FALSE}
+library(png)
+library(grid)
+```
+
+```{r, echo=FALSE}
+working_dir="/home/labs/davidgo/Collaboration/L4_MPRA"
+output_dir=sprintf("%s/test_QC",working_dir)
+```
+
+## barcode count per oligo
+
+This is a placeholder for an explanation on the analysis, perhaps mention what
+is considered to be good or bad example
+
+### Bad example 
+
+```{r,echo=FALSE}
+bad_example <- readPNG("/home/labs/davidgo/Collaboration/L4_MPRA/test_QC/satmutMPRA_L4a4/barcode count per oligo with zero.png",native = T)
+grid.newpage()
+grid.raster(bad_example,interpolate = FALSE)
+```
+
+### Good example 
+
+```{r,echo=FALSE}
+good_example <- readPNG("/home/labs/davidgo/Collaboration/L4_MPRA/test_QC/humanMPRA_L3a2/barcode count per oligo with zero.png",native = T)
+grid.newpage()
+grid.raster(good_example,interpolate = FALSE)
+
+```
+
+## Oligo Coverage
+
+### Bad example 
+
+```{r, echo=FALSE}
+bad_example <- readPNG("/home/labs/davidgo/Collaboration/L4_MPRA/test_QC/satmutMPRA_L4a4/Retrieved oligos by barcode threshold.png",native = T)
+grid.newpage()
+grid.raster(bad_example,interpolate = FALSE)
+```
+
+### Good example 
+
+```{r, echo=FALSE}
+good_example <- readPNG("/home/labs/davidgo/Collaboration/L4_MPRA/test_QC/humanMPRA_L3a2/Retrieved oligos by barcode threshold.png",native = T)
+grid.newpage()
+grid.raster(good_example,interpolate = FALSE)
+```
+
+## PCR analysis bias - G strech
+
+### Bad example 
+
+```{r, echo=FALSE}
+bad_example <- readPNG("/home/labs/davidgo/Collaboration/L4_MPRA/test_QC/satmutMPRA_L4a3/barcodes per oligo by G strech.png",native = T)
+grid.newpage()
+grid.raster(bad_example,interpolate = FALSE)
+```
+
+### Good example 
+
+```{r, echo=FALSE}
+good_example <- readPNG("/home/labs/davidgo/Collaboration/L4_MPRA/test_QC/humanMPRA_L3a1/barcodes per oligo by G strech.png",native = T)
+grid.newpage()
+grid.raster(good_example,interpolate = FALSE)
+```
+
+## PCR analysis bias - GC content
+
+### Bad example 
+```{r, echo=FALSE}
+bad_example <- readPNG("/home/labs/davidgo/Collaboration/L4_MPRA/test_QC/humanMPRA_L3a1/reads per oligo by gc.png",native = T)
+grid.newpage()
+grid.raster(bad_example,interpolate = FALSE)
+```
+
+
+### Good example 
+
+```{r, echo=FALSE}
+good_example <- readPNG("/home/labs/davidgo/Collaboration/L4_MPRA/test_QC/satmutMPRA_L4a3/reads per oligo by gc.png",native = T)
+grid.newpage()
+grid.raster(good_example,interpolate = FALSE)
+```
+
+```{r, echo=FALSE}
+
+```
+
+```{r, echo=FALSE}
+
+```
+
+```{r, echo=FALSE}
+
+```

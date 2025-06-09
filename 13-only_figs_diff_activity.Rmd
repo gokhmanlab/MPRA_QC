@@ -1,0 +1,137 @@
+# Differential Activity QC
+
+
+
+```{r, echo=FALSE}
+library(png)
+library(grid)
+```
+
+```{r, echo=FALSE}
+working_dir="/home/labs/davidgo/Collaboration/MPRA_QC_pipeline/diff_activity/plots/"
+output_dir=sprintf("%s/test_QC",working_dir)
+```
+
+## Correlation of Activity between allelic pairs
+
+
+
+### Bad example 
+
+```{r,echo=FALSE}
+bad_example <- readPNG(sprintf("%s/activity_by_allele_humanMPRA_L1a1_neurons.png",working_dir),native = T)
+grid.newpage()
+grid.raster(bad_example,interpolate = FALSE)
+```
+
+### Good example 
+
+```{r,echo=FALSE}
+good_example <- readPNG(sprintf("%s/activity_by_allele_humanMPRA_L3a2_chondrocytes.png",working_dir),native = T)
+grid.newpage()
+grid.raster(good_example,interpolate = FALSE)
+
+```
+
+
+## Correlation of Activity between allelic pairs - only active
+
+
+
+### Bad example 
+
+```{r,echo=FALSE}
+bad_example <- readPNG(sprintf("%s/activity_by_allele_humanMPRA_only_active_L1a1_neurons.png",working_dir),native = T)
+grid.newpage()
+grid.raster(bad_example,interpolate = FALSE)
+```
+
+### Good example 
+
+```{r,echo=FALSE}
+good_example <- readPNG(sprintf("%s/activity_by_allele_humanMPRA_only_active_L3a2_chondrocytes.png",working_dir),native = T)
+grid.newpage()
+grid.raster(good_example,interpolate = FALSE)
+
+```
+
+
+
+## Correlation of differential activity between cell types 
+
+
+
+### Bad example 
+
+```{r,echo=FALSE}
+bad_example <- readPNG(sprintf("%s/LFC_corrlation_cell_types_humanMPRA_L1a1.png",working_dir),native = T)
+grid.newpage()
+grid.raster(bad_example,interpolate = FALSE)
+```
+
+### Good example 
+
+```{r,echo=FALSE}
+good_example <- readPNG(sprintf("%s/LFC_corrlation_cell_types_methMPRA.png",working_dir),native = T)
+grid.newpage()
+grid.raster(good_example,interpolate = FALSE)
+
+```
+
+
+## overlapping tiles - diff activity 
+
+
+
+### Small overlap
+we expect to see higher correlation when the overlap is higher
+
+```{r,echo=FALSE}
+bps_overlap = 10
+bad_example <- readPNG(sprintf("%s/LFC_corrlation_overlapping_tiles_%d_methMPRA.png",working_dir,bps_overlap),native = T)
+grid.newpage()
+grid.raster(bad_example,interpolate = FALSE)
+```
+
+### Large overlap
+
+```{r,echo=FALSE}
+bps_overlap = 100
+good_example <- readPNG(sprintf("%s/LFC_corrlation_overlapping_tiles_%d_methMPRA.png",working_dir,bps_overlap),native = T)
+grid.newpage()
+grid.raster(good_example,interpolate = FALSE)
+
+```
+
+
+## Correlation between adjacent positions - autocorrelation
+
+### Bad example 
+
+```{r,echo=FALSE}
+bad_example <- readPNG(sprintf("%s/Autocorrelation_satmut4.png",working_dir),native = T)
+grid.newpage()
+grid.raster(bad_example,interpolate = FALSE)
+```
+
+### Good example 
+
+```{r,echo=FALSE}
+good_example <- readPNG(sprintf("%s/Autocorrelation_satmut1.png",working_dir),native = T)
+grid.newpage()
+grid.raster(good_example,interpolate = FALSE)
+```
+
+## Correlation between adjacent positions - clustering
+
+### high clustering
+
+```{r,echo=FALSE}
+bad_example <- readPNG(sprintf("%s/runs_test_satmut1.png",working_dir),native = T)
+grid.newpage()
+grid.raster(bad_example,interpolate = FALSE)
+```
+
+
+
+
