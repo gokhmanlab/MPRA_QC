@@ -5,6 +5,7 @@
 ```{r, echo=FALSE}
 library(png)
 library(grid)
+
 ```
 
 ```{r, echo=FALSE}
@@ -72,6 +73,159 @@ grid.raster(good_example, interpolate = FALSE)
 popViewport()
 
 ```
+
+
+
+## RNA vs. DNA scatter plot
+
+Lorem Ipsum
+
+
+```{r,echo=FALSE}
+
+grid.newpage()
+
+good_example <- readPNG(file.path(working_dir, "humanMPRA_L3a2", "RNA_DNA_ratio.png"),native = T)
+bad_example_1 <- readPNG(file.path(working_dir, "humanMPRA_L1a1", "RNA_DNA_ratio.png"),native = T)
+bad_example_2 <- readPNG(file.path(working_dir, "humanMPRA_L1a1_Neurons", "RNA_DNA_ratio.png"),native = T)
+
+
+# Start new page and define layout
+grid.newpage()
+pushViewport(viewport(layout = grid.layout(1, 3)))
+
+# Helper to specify location in layout
+vplayout <- function(row, col) viewport(layout.pos.row = row, layout.pos.col = col)
+
+# Draw both images in the layout without using print()
+pushViewport(vplayout(1, 1))
+grid.raster(good_example, interpolate = FALSE)
+popViewport()
+
+pushViewport(vplayout(1, 2))
+grid.raster(bad_example_1, interpolate = FALSE)
+popViewport()
+
+pushViewport(vplayout(1, 3))
+grid.raster(bad_example_2, interpolate = FALSE)
+popViewport()
+
+```
+
+
+## RNA vs. DNA scatter plot - group of interest - Controls
+
+Lorem Ipsum
+
+```{r,echo=FALSE}
+
+grid.newpage()
+
+good_example <- readPNG(file.path(working_dir, "humanMPRA_L3a2", "RNA_DNA_ratio_w_controls_highlighted.png"),native = T)
+bad_example_1 <- readPNG(file.path(working_dir, "humanMPRA_L1a1", "RNA_DNA_ratio_w_controls_highlighted.png"),native = T)
+bad_example_2 <- readPNG(file.path(working_dir, "humanMPRA_L1a1_Neurons", "RNA_DNA_ratio_w_controls_highlighted.png"),native = T)
+
+
+# Start new page and define layout
+grid.newpage()
+pushViewport(viewport(layout = grid.layout(1, 3)))
+
+# Helper to specify location in layout
+vplayout <- function(row, col) viewport(layout.pos.row = row, layout.pos.col = col)
+
+# Draw both images in the layout without using print()
+pushViewport(vplayout(1, 1))
+grid.raster(good_example, interpolate = FALSE)
+popViewport()
+
+pushViewport(vplayout(1, 2))
+grid.raster(bad_example_1, interpolate = FALSE)
+popViewport()
+
+pushViewport(vplayout(1, 3))
+grid.raster(bad_example_2, interpolate = FALSE)
+popViewport()
+
+```
+
+
+## RNA vs. DNA scatter plot - group of interest - Active vs Non-active
+
+Lorem Ipsum
+
+
+```{r,echo=FALSE}
+
+grid.newpage()
+
+good_example <- readPNG(file.path(working_dir, "humanMPRA_L3a2", "RNA_DNA_ratio_active_oligos_highlighted.png"),native = T)
+bad_example_1 <- readPNG(file.path(working_dir, "humanMPRA_L1a1", "RNA_DNA_ratio_active_oligos_highlighted.png"),native = T)
+bad_example_2 <- readPNG(file.path(working_dir, "humanMPRA_L1a1_Neurons", "RNA_DNA_ratio_active_oligos_highlighted.png"),native = T)
+
+
+# Start new page and define layout
+grid.newpage()
+pushViewport(viewport(layout = grid.layout(1, 3)))
+
+# Helper to specify location in layout
+vplayout <- function(row, col) viewport(layout.pos.row = row, layout.pos.col = col)
+
+# Draw both images in the layout without using print()
+pushViewport(vplayout(1, 1))
+grid.raster(good_example, interpolate = FALSE)
+popViewport()
+
+pushViewport(vplayout(1, 2))
+grid.raster(bad_example_1, interpolate = FALSE)
+popViewport()
+
+pushViewport(vplayout(1, 3))
+grid.raster(bad_example_2, interpolate = FALSE)
+popViewport()
+
+```
+
+
+
+## RNA/DNA ratio correlation between replicates
+
+Lorem Ipsum
+
+
+
+```{r,echo=FALSE}
+
+grid.newpage()
+
+good_example <- readPNG(file.path(working_dir, "humanMPRA_L3a2", "RNA_DNA_ratio_active_oligos_highlighted.png"),native = T)
+bad_example_1 <- readPNG(file.path(working_dir, "humanMPRA_L1a1", "RNA_DNA_ratio_active_oligos_highlighted.png"),native = T)
+bad_example_2 <- readPNG(file.path(working_dir, "humanMPRA_L1a1_Neurons", "RNA_DNA_ratio_active_oligos_highlighted.png"),native = T)
+
+
+# Start new page and define layout
+grid.newpage()
+pushViewport(viewport(layout = grid.layout(1, 3)))
+
+# Helper to specify location in layout
+vplayout <- function(row, col) viewport(layout.pos.row = row, layout.pos.col = col)
+
+# Draw both images in the layout without using print()
+pushViewport(vplayout(1, 1))
+grid.raster(good_example, interpolate = FALSE)
+popViewport()
+
+pushViewport(vplayout(1, 2))
+grid.raster(bad_example_1, interpolate = FALSE)
+popViewport()
+
+pushViewport(vplayout(1, 3))
+grid.raster(bad_example_2, interpolate = FALSE)
+popViewport()
+
+```
+
+
+
 
 
 
