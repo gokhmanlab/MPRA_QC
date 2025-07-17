@@ -1,8 +1,6 @@
 about
 usage
 scripts
-hello-bookdown
-a-section
 associations-qc
 barcode-count-per-oligo
 pcr-analysis-bias---gc-content
