@@ -1,6 +1,14 @@
 about
 usage
 scripts
+differential-activity-qc
+correlation-of-activity-between-allelic-pairs
+correlation-of-activity-between-allelic-pairs---only-active
+correlation-of-differential-activity-between-cell-types
+overlapping-tiles---diff-activity
+correlation-between-adjacent-positions
+autocorrelation
+runs-test---clustering
 associations-qc
 barcode-count-per-oligo
 pcr-analysis-bias---gc-content
@@ -30,11 +38,3 @@ increasing-mindna-threshold-to-decrease-noise
 umi-complexity
 activity-histogram
 cumulative-rna-reads
-differential-activity-qc
-correlation-of-activity-between-allelic-pairs
-correlation-of-activity-between-allelic-pairs---only-active
-correlation-of-differential-activity-between-cell-types
-overlapping-tiles---diff-activity
-correlation-between-adjacent-positions
-autocorrelation
-runs-test---clustering
