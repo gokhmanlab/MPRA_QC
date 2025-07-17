@@ -125,8 +125,7 @@ popViewport()
 
 
 bad_example <- readPNG("/home/labs/davidgo/Collaboration/MPRA_QC_pipeline/associations/Max_MPRA_run2/Retrieved oligos by barcode threshold.png",native = T)
-good_example <- readPNG("/home/labs/davidgo/Collaboration/MPRA_QC_pipeline/placeholder.png",native = T)
-
+good_example <- readPNG("/home/labs/davidgo/Collaboration/MPRA_QC_pipeline/associations/humanMPRA_L3a2/Retrieved oligos by barcode threshold.png",native = T)
 
 # Start new page and define layout
 grid.newpage()
@@ -175,9 +174,9 @@ popViewport()
 ```{r,echo=FALSE}
 
 
-bad_example <- readPNG("/home/labs/davidgo/Collaboration/MPRA_QC_pipeline/associations/satmutMPRA_L4a3/downsampling_analysis.png",native = T)
-good_example <- readPNG("/home/labs/davidgo/Collaboration/MPRA_QC_pipeline/placeholder.png",native = T)
 
+bad_example <- readPNG("/home/labs/davidgo/Collaboration/MPRA_QC_pipeline/placeholder.png",native = T)
+good_example <- readPNG("/home/labs/davidgo/Collaboration/MPRA_QC_pipeline/associations/satmutMPRA_L4a3/downsampling_analysis.png",native = T)
 
 # Start new page and define layout
 grid.newpage()
@@ -200,8 +199,8 @@ popViewport()
 ```{r,echo=FALSE}
 
 
-bad_example <- readPNG("/home/labs/davidgo/Collaboration/MPRA_QC_pipeline/associations/satmutMPRA_L4a3/model_comparison_hill.png",native = T)
-good_example <- readPNG("/home/labs/davidgo/Collaboration/MPRA_QC_pipeline/placeholder.png",native = T)
+bad_example <- readPNG("/home/labs/davidgo/Collaboration/MPRA_QC_pipeline/placeholder.png",native = T)
+good_example <- readPNG("/home/labs/davidgo/Collaboration/MPRA_QC_pipeline/associations/satmutMPRA_L4a3/model_comparison_hill.png",native = T)
 
 
 # Start new page and define layout
