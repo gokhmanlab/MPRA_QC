@@ -16,7 +16,6 @@ output_dir=sprintf("%s/test_QC",working_dir)
 
 
 
-### Bad example 
 
 ```{r,echo=FALSE}
 bad_example <- readPNG(sprintf("%s/activity_by_allele_humanMPRA_L1a1_neurons.png",working_dir),native = T)
@@ -31,11 +30,11 @@ pushViewport(viewport(layout = grid.layout(1, 2)))
 vplayout <- function(row, col) viewport(layout.pos.row = row, layout.pos.col = col)
 
 # Draw both images in the layout without using print()
-pushViewport(vplayout(1, 1))
+pushViewport(vplayout(1, 2))
 grid.raster(bad_example, interpolate = FALSE)
 popViewport()
 
-pushViewport(vplayout(1, 2))
+pushViewport(vplayout(1, 1))
 grid.raster(good_example, interpolate = FALSE)
 popViewport()
 
@@ -63,11 +62,11 @@ pushViewport(viewport(layout = grid.layout(1, 2)))
 vplayout <- function(row, col) viewport(layout.pos.row = row, layout.pos.col = col)
 
 # Draw both images in the layout without using print()
-pushViewport(vplayout(1, 1))
+pushViewport(vplayout(1, 2))
 grid.raster(bad_example, interpolate = FALSE)
 popViewport()
 
-pushViewport(vplayout(1, 2))
+pushViewport(vplayout(1, 1))
 grid.raster(good_example, interpolate = FALSE)
 popViewport()
 ```
@@ -92,11 +91,11 @@ pushViewport(viewport(layout = grid.layout(1, 2)))
 vplayout <- function(row, col) viewport(layout.pos.row = row, layout.pos.col = col)
 
 # Draw both images in the layout without using print()
-pushViewport(vplayout(1, 1))
+pushViewport(vplayout(1, 2))
 grid.raster(bad_example, interpolate = FALSE)
 popViewport()
 
-pushViewport(vplayout(1, 2))
+pushViewport(vplayout(1, 1))
 grid.raster(good_example, interpolate = FALSE)
 popViewport()
 ```
@@ -129,7 +128,10 @@ popViewport()
 ```
 
 
-## Correlation between adjacent positions - autocorrelation
+## Correlation between adjacent positions 
+
+
+### autocorrelation
 
 ```{r,echo=FALSE}
 
@@ -146,26 +148,38 @@ pushViewport(viewport(layout = grid.layout(1, 2)))
 vplayout <- function(row, col) viewport(layout.pos.row = row, layout.pos.col = col)
 
 # Draw both images in the layout without using print()
-pushViewport(vplayout(1, 1))
+pushViewport(vplayout(1, 2))
 grid.raster(bad_example, interpolate = FALSE)
 popViewport()
 
-pushViewport(vplayout(1, 2))
+pushViewport(vplayout(1, 1))
 grid.raster(good_example, interpolate = FALSE)
 popViewport()
 ```
 
-
-
-## Correlation between adjacent positions - clustering
-
-### high clustering
+### runs test - clustering
 
 ```{r,echo=FALSE}
-bad_example <- readPNG(sprintf("%s/runs_test_satmut1.png",working_dir),native = T)
+clustering_example <- readPNG(sprintf("%s/runs_test_satmut1.png",working_dir),native = T)
+saturation_example <- readPNG(sprintf("%s/satmut1_LFC.png",working_dir),native = T)
 grid.newpage()
-grid.raster(bad_example,interpolate = FALSE)
+pushViewport(viewport(layout = grid.layout(2, 1)))
+
+# Helper to specify location in layout
+vplayout <- function(row, col) viewport(layout.pos.row = row, layout.pos.col = col)
+
+# Draw both images in the layout without using print()
+pushViewport(vplayout(2, 1))
+grid.raster(clustering_example, interpolate = FALSE)
+popViewport()
+
+pushViewport(vplayout(1, 1))
+grid.raster(saturation_example, interpolate = FALSE)
+popViewport()
 ```
+
+
+
 
 
 
